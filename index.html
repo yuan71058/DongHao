@@ -776,9 +776,15 @@
             });
         });
 
+        // 点击关闭按钮
+        document.querySelector('.image-modal .close-btn').addEventListener('click', function (e) {
+            e.stopPropagation();
+            closeImageModal();
+        });
+
         // 点击弹窗背景关闭
         document.getElementById('imageModal').addEventListener('click', function (e) {
-            if (e.target === this || e.target.classList.contains('close-btn')) {
+            if (e.target === this) {
                 closeImageModal();
             }
         });
