@@ -690,12 +690,33 @@
             }
         }
 
-        // 加载保存的主题
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            document.documentElement.setAttribute('data-theme', 'light');
-            document.querySelector('.theme-toggle').textContent = '☀️';
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const btn = document.querySelector('.theme-toggle');
+
+            if (savedTheme) {
+                // 使用用户手动设置的主题
+                if (savedTheme === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    btn.textContent = '☀️';
+                }
+            } else {
+                // 没有保存的设置，根据时间自动切换
+                const hour = new Date().getHours();
+                // 6:00 - 18:00 使用浅色主题，其他时间使用深色主题
+                if (hour >= 6 && hour < 18) {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    btn.textContent = '☀️';
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    btn.textContent = '🌙';
+                    localStorage.setItem('theme', 'dark');
+                }
+            }
         }
+
+        // 初始化主题
+        initTheme();
     </script>
 </body>
 
