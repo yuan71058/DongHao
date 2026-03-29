@@ -3,206 +3,539 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>冬浩工作室</title>
+    <title>冬浩工作室 - 软件开发与技术咨询</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --bg: #0a0a0a;
+            --bg-card: #141414;
+            --text: #ffffff;
+            --text-muted: #888888;
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.3);
+            --border: #222222;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background: #fff;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
         }
-        .wrap {
-            max-width: 720px;
+        
+        .container {
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 60px 24px;
+            padding: 0 24px;
         }
+        
+        /* Header */
         header {
-            margin-bottom: 80px;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border);
         }
-        .logo {
-            font-size: 24px;
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .brand-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent), #1d4ed8);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
+            font-size: 18px;
+            box-shadow: 0 0 30px var(--accent-glow);
         }
-        .tagline {
-            color: #888;
-            font-size: 14px;
-        }
-        section {
-            margin-bottom: 60px;
-        }
-        h2 {
-            font-size: 14px;
+        
+        .brand-text h1 {
+            font-size: 20px;
             font-weight: 600;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 24px;
+            letter-spacing: -0.5px;
         }
-        p {
-            margin-bottom: 16px;
+        
+        .brand-text span {
+            font-size: 13px;
+            color: var(--text-muted);
         }
-        .service {
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
+        
+        /* Hero */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
         }
-        .service:last-child {
+        
+        .hero h2 {
+            font-size: clamp(32px, 6vw, 56px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat strong {
+            display: block;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .stat span {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        /* Sections */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        section:last-of-type {
             border-bottom: none;
         }
-        .service h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .service p {
-            color: #666;
+        
+        .section-title {
             font-size: 14px;
-            margin-bottom: 0;
-        }
-        .work {
+            font-weight: 500;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 32px;
         }
-        .work-title {
-            font-size: 16px;
+        
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+        
+        .service-card h3 {
+            font-size: 18px;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        .work-meta {
-            font-size: 13px;
-            color: #999;
-            margin-bottom: 8px;
+        
+        .service-card h3::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent);
         }
-        .work-desc {
+        
+        .service-card p {
+            color: var(--text-muted);
             font-size: 14px;
-            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* Works */
+        .works-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .work-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 20px;
+            align-items: start;
+            transition: all 0.3s ease;
+        }
+        
+        .work-item:hover {
+            border-color: var(--accent);
+        }
+        
+        .work-info h3 {
+            font-size: 18px;
+            font-weight: 600;
             margin-bottom: 8px;
         }
-        .work-tech {
-            font-size: 12px;
-            color: #999;
+        
+        .work-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: var(--text-muted);
         }
-        .contact-item {
+        
+        .work-desc {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        
+        .work-tech {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .work-tech span {
+            padding: 4px 12px;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            font-size: 12px;
+            border-radius: 20px;
+            font-family: monospace;
+        }
+        
+        .work-year {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-family: monospace;
+        }
+        
+        /* Tech */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        
+        .tech-category h4 {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
             margin-bottom: 16px;
         }
-        .contact-item span {
+        
+        .tech-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tech-items span {
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        
+        .tech-items span:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+        
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            border-color: var(--accent);
+        }
+        
+        .contact-card span {
             display: block;
             font-size: 12px;
-            color: #999;
-            margin-bottom: 4px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
         }
-        .contact-item a {
-            color: #333;
+        
+        .contact-card a,
+        .contact-card p {
+            color: var(--text);
+            font-size: 15px;
             text-decoration: none;
         }
-        .contact-item a:hover {
-            text-decoration: underline;
+        
+        .contact-card a:hover {
+            color: var(--accent);
         }
+        
+        /* Footer */
         footer {
-            margin-top: 80px;
-            padding-top: 40px;
-            border-top: 1px solid #eee;
-            font-size: 13px;
-            color: #999;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
         }
-        @media (max-width: 600px) {
-            .wrap { padding: 40px 20px; }
-            header { margin-bottom: 60px; }
+        
+        footer p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0 40px;
+            }
+            
+            .stats {
+                gap: 40px;
+            }
+            
+            .work-item {
+                grid-template-columns: 1fr;
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
+    <div class="container">
         <header>
-            <div class="logo">冬浩工作室</div>
-            <div class="tagline">软件开发 / 网站建设 / 技术咨询</div>
+            <div class="brand">
+                <div class="brand-icon">DH</div>
+                <div class="brand-text">
+                    <h1>冬浩工作室</h1>
+                    <span>软件开发 · 网站建设 · 技术咨询</span>
+                </div>
+            </div>
         </header>
-
-        <section>
-            <h2>关于</h2>
-            <p>冬浩工作室是一家专注于软件开发的技术团队。我们为企业提供定制化的软件解决方案，从需求分析到产品交付，全程专业把控。</p>
-            <p>成立于2019年，已服务超过30家企业客户，交付50余个项目。</p>
-        </section>
-
-        <section>
-            <h2>服务</h2>
-            <div class="service">
-                <h3>定制软件开发</h3>
-                <p>企业管理系统、ERP、CRM、数据平台等业务系统定制开发</p>
-            </div>
-            <div class="service">
-                <h3>网站与小程序</h3>
-                <p>企业官网、电商平台、微信小程序、H5应用开发</p>
-            </div>
-            <div class="service">
-                <h3>自动化工具</h3>
-                <p>数据采集、批量处理、自动化脚本等效率工具开发</p>
-            </div>
-            <div class="service">
-                <h3>技术咨询</h3>
-                <p>技术选型、架构设计、系统优化、运维支持</p>
+        
+        <section class="hero">
+            <h2>用代码构建<br>数字未来</h2>
+            <p>我们是一支专注于软件开发的技术团队，为企业提供定制化的软件解决方案，从需求分析到产品交付，全程专业把控。</p>
+            <div class="stats">
+                <div class="stat">
+                    <strong>50+</strong>
+                    <span>项目交付</span>
+                </div>
+                <div class="stat">
+                    <strong>30+</strong>
+                    <span>合作客户</span>
+                </div>
+                <div class="stat">
+                    <strong>5年</strong>
+                    <span>行业经验</span>
+                </div>
             </div>
         </section>
-
+        
         <section>
-            <h2>案例</h2>
-            <div class="work">
-                <div class="work-title">企业综合管理平台</div>
-                <div class="work-meta">2024 · Web应用</div>
-                <div class="work-desc">为制造企业定制的生产、库存、销售一体化管理系统</div>
-                <div class="work-tech">Vue.js / Python / MySQL</div>
-            </div>
-            <div class="work">
-                <div class="work-title">社区服务小程序</div>
-                <div class="work-meta">2024 · 微信小程序</div>
-                <div class="work-desc">物业报修、缴费、公告一站式社区服务平台</div>
-                <div class="work-tech">微信小程序 / 云开发</div>
-            </div>
-            <div class="work">
-                <div class="work-title">数据可视化大屏</div>
-                <div class="work-meta">2023 · 数据分析</div>
-                <div class="work-desc">实时数据展示大屏，支持多数据源接入与动态刷新</div>
-                <div class="work-tech">ECharts / Node.js</div>
-            </div>
-            <div class="work">
-                <div class="work-title">在线商城系统</div>
-                <div class="work-meta">2023 · 电商</div>
-                <div class="work-desc">B2C电商平台，支持多商户入驻与订单管理</div>
-                <div class="work-tech">React / Java</div>
+            <div class="section-title">我们的服务</div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>定制软件开发</h3>
+                    <p>企业管理系统、ERP、CRM、数据平台等业务系统定制开发，提升企业运营效率</p>
+                </div>
+                <div class="service-card">
+                    <h3>网站与小程序</h3>
+                    <p>企业官网、电商平台、微信小程序、H5应用开发，打造专业的线上品牌形象</p>
+                </div>
+                <div class="service-card">
+                    <h3>自动化工具</h3>
+                    <p>数据采集、批量处理、自动化脚本等效率工具开发，减少重复劳动</p>
+                </div>
+                <div class="service-card">
+                    <h3>技术咨询</h3>
+                    <p>技术选型、架构设计、系统优化、运维支持，提供全方位技术保障</p>
+                </div>
             </div>
         </section>
-
+        
         <section>
-            <h2>技术</h2>
-            <p>前端：Vue.js / React / 微信小程序 / TypeScript</p>
-            <p>后端：Python / Java / Node.js / Go</p>
-            <p>数据：MySQL / PostgreSQL / MongoDB / Redis</p>
-            <p>运维：Docker / Linux / Nginx / Git</p>
+            <div class="section-title">精选案例</div>
+            <div class="works-list">
+                <div class="work-item">
+                    <div class="work-info">
+                        <h3>企业综合管理平台</h3>
+                        <div class="work-meta">
+                            <span>Web应用</span>
+                            <span>制造业</span>
+                        </div>
+                        <div class="work-desc">为制造企业定制的生产、库存、销售一体化管理系统，实现业务流程数字化</div>
+                        <div class="work-tech">
+                            <span>Vue.js</span>
+                            <span>Python</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <div class="work-year">2024</div>
+                </div>
+                <div class="work-item">
+                    <div class="work-info">
+                        <h3>社区服务小程序</h3>
+                        <div class="work-meta">
+                            <span>微信小程序</span>
+                            <span>物业服务</span>
+                        </div>
+                        <div class="work-desc">物业报修、缴费、公告一站式社区服务平台，提升居民生活便利性</div>
+                        <div class="work-tech">
+                            <span>微信小程序</span>
+                            <span>云开发</span>
+                        </div>
+                    </div>
+                    <div class="work-year">2024</div>
+                </div>
+                <div class="work-item">
+                    <div class="work-info">
+                        <h3>数据可视化大屏</h3>
+                        <div class="work-meta">
+                            <span>数据分析</span>
+                            <span>实时监控</span>
+                        </div>
+                        <div class="work-desc">实时数据展示大屏，支持多数据源接入与动态刷新，助力数据决策</div>
+                        <div class="work-tech">
+                            <span>ECharts</span>
+                            <span>Node.js</span>
+                            <span>WebSocket</span>
+                        </div>
+                    </div>
+                    <div class="work-year">2023</div>
+                </div>
+                <div class="work-item">
+                    <div class="work-info">
+                        <h3>在线商城系统</h3>
+                        <div class="work-meta">
+                            <span>电商平台</span>
+                            <span>B2C</span>
+                        </div>
+                        <div class="work-desc">B2C电商平台，支持多商户入驻、订单管理、支付集成等完整电商功能</div>
+                        <div class="work-tech">
+                            <span>React</span>
+                            <span>Java</span>
+                            <span>Redis</span>
+                        </div>
+                    </div>
+                    <div class="work-year">2023</div>
+                </div>
+            </div>
         </section>
-
+        
         <section>
-            <h2>联系</h2>
-            <div class="contact-item">
-                <span>邮箱</span>
-                <a href="mailto:contact@donghao.com">contact@donghao.com</a>
-            </div>
-            <div class="contact-item">
-                <span>微信</span>
-                <span>DongHao_Studio</span>
-            </div>
-            <div class="contact-item">
-                <span>GitHub</span>
-                <a href="https://github.com/yuan71058" target="_blank">github.com/yuan71058</a>
-            </div>
-            <div class="contact-item">
-                <span>Gitee</span>
-                <a href="https://gitee.com/yuan71058" target="_blank">gitee.com/yuan71058</a>
+            <div class="section-title">技术栈</div>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h4>前端</h4>
+                    <div class="tech-items">
+                        <span>Vue.js</span>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>微信小程序</span>
+                        <span>Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>后端</h4>
+                    <div class="tech-items">
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>Node.js</span>
+                        <span>Go</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>数据</h4>
+                    <div class="tech-items">
+                        <span>MySQL</span>
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                        <span>Redis</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>运维</h4>
+                    <div class="tech-items">
+                        <span>Docker</span>
+                        <span>Linux</span>
+                        <span>Nginx</span>
+                        <span>Git</span>
+                    </div>
+                </div>
             </div>
         </section>
-
+        
+        <section>
+            <div class="section-title">联系我们</div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span>邮箱</span>
+                    <a href="mailto:contact@donghao.com">contact@donghao.com</a>
+                </div>
+                <div class="contact-card">
+                    <span>微信</span>
+                    <p>DongHao_Studio</p>
+                </div>
+                <div class="contact-card">
+                    <span>GitHub</span>
+                    <a href="https://github.com/yuan71058" target="_blank">yuan71058</a>
+                </div>
+                <div class="contact-card">
+                    <span>Gitee</span>
+                    <a href="https://gitee.com/yuan71058" target="_blank">yuan71058</a>
+                </div>
+            </div>
+        </section>
+        
         <footer>
-            &copy; 2024 冬浩工作室
+            <p>&copy; 2024 冬浩工作室. All rights reserved.</p>
         </footer>
     </div>
 </body>
