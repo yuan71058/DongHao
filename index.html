@@ -1,449 +1,209 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="冬浩工作室 - 用代码构建数字未来">
-    <meta name="keywords" content="冬浩工作室,软件开发,网站开发,小程序开发,技术外包">
-    <title>冬浩工作室 - 用代码构建数字未来</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>冬浩工作室</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #fff;
+        }
+        .wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        header {
+            margin-bottom: 80px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .tagline {
+            color: #888;
+            font-size: 14px;
+        }
+        section {
+            margin-bottom: 60px;
+        }
+        h2 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+        p {
+            margin-bottom: 16px;
+        }
+        .service {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .service:last-child {
+            border-bottom: none;
+        }
+        .service h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .service p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        .work {
+            margin-bottom: 32px;
+        }
+        .work-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .work-meta {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+        .work-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .work-tech {
+            font-size: 12px;
+            color: #999;
+        }
+        .contact-item {
+            margin-bottom: 16px;
+        }
+        .contact-item span {
+            display: block;
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 4px;
+        }
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+        }
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+            font-size: 13px;
+            color: #999;
+        }
+        @media (max-width: 600px) {
+            .wrap { padding: 40px 20px; }
+            header { margin-bottom: 60px; }
+        }
+    </style>
 </head>
-
 <body>
-    <header class="header" id="header">
-        <div class="header-inner">
-            <a href="#" class="logo">
-                <span class="logo-mark">DH</span>
-                <span class="logo-name">冬浩工作室</span>
-            </a>
-            <nav class="nav" id="nav">
-                <a href="#home" class="nav-item active">首页</a>
-                <a href="#services" class="nav-item">服务</a>
-                <a href="#works" class="nav-item">案例</a>
-                <a href="#about" class="nav-item">关于</a>
-                <a href="#contact" class="nav-item">联系</a>
-            </nav>
-            <button class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+    <div class="wrap">
+        <header>
+            <div class="logo">冬浩工作室</div>
+            <div class="tagline">软件开发 / 网站建设 / 技术咨询</div>
+        </header>
 
-    <main>
-        <section class="hero" id="home">
-            <div class="hero-bg">
-                <div class="hero-grid"></div>
+        <section>
+            <h2>关于</h2>
+            <p>冬浩工作室是一家专注于软件开发的技术团队。我们为企业提供定制化的软件解决方案，从需求分析到产品交付，全程专业把控。</p>
+            <p>成立于2019年，已服务超过30家企业客户，交付50余个项目。</p>
+        </section>
+
+        <section>
+            <h2>服务</h2>
+            <div class="service">
+                <h3>定制软件开发</h3>
+                <p>企业管理系统、ERP、CRM、数据平台等业务系统定制开发</p>
             </div>
-            <div class="hero-content">
-                <div class="hero-badge">软件开发工作室</div>
-                <h1 class="hero-title">
-                    用代码<br>
-                    <em>构建数字未来</em>
-                </h1>
-                <p class="hero-desc">
-                    我们是一支热爱技术的开发团队，专注于为企业提供定制化的软件解决方案。<br>
-                    从创意到落地，我们用专业和热情打造每一个项目。
-                </p>
-                <div class="hero-actions">
-                    <a href="#works" class="btn btn-dark">查看案例</a>
-                    <a href="#contact" class="btn btn-outline">开始合作</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <strong>50+</strong>
-                        <span>项目交付</span>
-                    </div>
-                    <div class="stat">
-                        <strong>30+</strong>
-                        <span>合作客户</span>
-                    </div>
-                    <div class="stat">
-                        <strong>5年</strong>
-                        <span>行业经验</span>
-                    </div>
-                </div>
+            <div class="service">
+                <h3>网站与小程序</h3>
+                <p>企业官网、电商平台、微信小程序、H5应用开发</p>
             </div>
-            <div class="scroll-hint">
-                <span>向下滚动</span>
-                <i></i>
+            <div class="service">
+                <h3>自动化工具</h3>
+                <p>数据采集、批量处理、自动化脚本等效率工具开发</p>
+            </div>
+            <div class="service">
+                <h3>技术咨询</h3>
+                <p>技术选型、架构设计、系统优化、运维支持</p>
             </div>
         </section>
 
-        <section class="services" id="services">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Services</span>
-                    <h2 class="section-title">我们能做什么</h2>
-                    <p class="section-desc">根据您的业务需求，提供全方位的技术解决方案</p>
-                </div>
-                <div class="service-list">
-                    <article class="service-card">
-                        <div class="service-num">01</div>
-                        <div class="service-content">
-                            <h3>定制软件开发</h3>
-                            <p>根据企业实际业务流程，量身定制管理系统、业务平台等各类软件产品，提升工作效率。</p>
-                            <ul class="service-tags">
-                                <li>企业管理系统</li>
-                                <li>ERP/CRM系统</li>
-                                <li>数据管理平台</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="service-card">
-                        <div class="service-num">02</div>
-                        <div class="service-content">
-                            <h3>网站与小程序</h3>
-                            <p>从企业官网到电商平台，从展示型网站到功能型应用，打造专业的线上品牌形象。</p>
-                            <ul class="service-tags">
-                                <li>企业官网</li>
-                                <li>电商平台</li>
-                                <li>微信小程序</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="service-card">
-                        <div class="service-num">03</div>
-                        <div class="service-content">
-                            <h3>自动化工具开发</h3>
-                            <p>开发各类自动化脚本和工具，帮助企业减少重复劳动，降低人力成本。</p>
-                            <ul class="service-tags">
-                                <li>数据处理工具</li>
-                                <li>自动化脚本</li>
-                                <li>爬虫采集</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="service-card">
-                        <div class="service-num">04</div>
-                        <div class="service-content">
-                            <h3>技术咨询与支持</h3>
-                            <p>提供技术选型建议、架构设计咨询，以及长期的技术维护和支持服务。</p>
-                            <ul class="service-tags">
-                                <li>技术选型</li>
-                                <li>架构设计</li>
-                                <li>运维支持</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
+        <section>
+            <h2>案例</h2>
+            <div class="work">
+                <div class="work-title">企业综合管理平台</div>
+                <div class="work-meta">2024 · Web应用</div>
+                <div class="work-desc">为制造企业定制的生产、库存、销售一体化管理系统</div>
+                <div class="work-tech">Vue.js / Python / MySQL</div>
+            </div>
+            <div class="work">
+                <div class="work-title">社区服务小程序</div>
+                <div class="work-meta">2024 · 微信小程序</div>
+                <div class="work-desc">物业报修、缴费、公告一站式社区服务平台</div>
+                <div class="work-tech">微信小程序 / 云开发</div>
+            </div>
+            <div class="work">
+                <div class="work-title">数据可视化大屏</div>
+                <div class="work-meta">2023 · 数据分析</div>
+                <div class="work-desc">实时数据展示大屏，支持多数据源接入与动态刷新</div>
+                <div class="work-tech">ECharts / Node.js</div>
+            </div>
+            <div class="work">
+                <div class="work-title">在线商城系统</div>
+                <div class="work-meta">2023 · 电商</div>
+                <div class="work-desc">B2C电商平台，支持多商户入驻与订单管理</div>
+                <div class="work-tech">React / Java</div>
             </div>
         </section>
 
-        <section class="works" id="works">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Portfolio</span>
-                    <h2 class="section-title">精选案例</h2>
-                    <p class="section-desc">每一个项目都倾注了我们的心血与热情</p>
-                </div>
-                <div class="works-grid">
-                    <article class="work-card work-large">
-                        <div class="work-image">
-                            <div class="work-placeholder">
-                                <span>企业管理系统</span>
-                            </div>
-                        </div>
-                        <div class="work-info">
-                            <div class="work-meta">
-                                <span class="work-category">Web应用</span>
-                                <span class="work-year">2024</span>
-                            </div>
-                            <h3 class="work-title">企业综合管理平台</h3>
-                            <p class="work-desc">为某制造企业定制的综合管理系统，涵盖生产、库存、销售、财务等模块，实现业务流程数字化。</p>
-                            <div class="work-tech">
-                                <span>Vue.js</span>
-                                <span>Python</span>
-                                <span>MySQL</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image">
-                            <div class="work-placeholder">
-                                <span>小程序</span>
-                            </div>
-                        </div>
-                        <div class="work-info">
-                            <div class="work-meta">
-                                <span class="work-category">小程序</span>
-                                <span class="work-year">2024</span>
-                            </div>
-                            <h3 class="work-title">社区服务小程序</h3>
-                            <p class="work-desc">社区物业服务平台，支持报修、缴费、公告等功能。</p>
-                            <div class="work-tech">
-                                <span>微信小程序</span>
-                                <span>云开发</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image">
-                            <div class="work-placeholder">
-                                <span>数据平台</span>
-                            </div>
-                        </div>
-                        <div class="work-info">
-                            <div class="work-meta">
-                                <span class="work-category">数据分析</span>
-                                <span class="work-year">2023</span>
-                            </div>
-                            <h3 class="work-title">数据可视化大屏</h3>
-                            <p class="work-desc">实时数据展示大屏，支持多数据源接入。</p>
-                            <div class="work-tech">
-                                <span>ECharts</span>
-                                <span>Node.js</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image">
-                            <div class="work-placeholder">
-                                <span>电商</span>
-                            </div>
-                        </div>
-                        <div class="work-info">
-                            <div class="work-meta">
-                                <span class="work-category">电商</span>
-                                <span class="work-year">2023</span>
-                            </div>
-                            <h3 class="work-title">在线商城系统</h3>
-                            <p class="work-desc">B2C电商平台，支持多商户入驻。</p>
-                            <div class="work-tech">
-                                <span>React</span>
-                                <span>Java</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="work-card">
-                        <div class="work-image">
-                            <div class="work-placeholder">
-                                <span>工具</span>
-                            </div>
-                        </div>
-                        <div class="work-info">
-                            <div class="work-meta">
-                                <span class="work-category">自动化</span>
-                                <span class="work-year">2023</span>
-                            </div>
-                            <h3 class="work-title">数据采集工具</h3>
-                            <p class="work-desc">多平台数据自动采集与整理工具。</p>
-                            <div class="work-tech">
-                                <span>Python</span>
-                                <span>Selenium</span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+        <section>
+            <h2>技术</h2>
+            <p>前端：Vue.js / React / 微信小程序 / TypeScript</p>
+            <p>后端：Python / Java / Node.js / Go</p>
+            <p>数据：MySQL / PostgreSQL / MongoDB / Redis</p>
+            <p>运维：Docker / Linux / Nginx / Git</p>
+        </section>
+
+        <section>
+            <h2>联系</h2>
+            <div class="contact-item">
+                <span>邮箱</span>
+                <a href="mailto:contact@donghao.com">contact@donghao.com</a>
+            </div>
+            <div class="contact-item">
+                <span>微信</span>
+                <span>DongHao_Studio</span>
+            </div>
+            <div class="contact-item">
+                <span>GitHub</span>
+                <a href="https://github.com/yuan71058" target="_blank">github.com/yuan71058</a>
+            </div>
+            <div class="contact-item">
+                <span>Gitee</span>
+                <a href="https://gitee.com/yuan71058" target="_blank">gitee.com/yuan71058</a>
             </div>
         </section>
 
-        <section class="tech">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Technology</span>
-                    <h2 class="section-title">技术栈</h2>
-                </div>
-                <div class="tech-grid">
-                    <div class="tech-category">
-                        <h4>前端开发</h4>
-                        <div class="tech-items">
-                            <span>Vue.js</span>
-                            <span>React</span>
-                            <span>微信小程序</span>
-                            <span>HTML5/CSS3</span>
-                            <span>TypeScript</span>
-                        </div>
-                    </div>
-                    <div class="tech-category">
-                        <h4>后端开发</h4>
-                        <div class="tech-items">
-                            <span>Python</span>
-                            <span>Java</span>
-                            <span>Node.js</span>
-                            <span>PHP</span>
-                            <span>Go</span>
-                        </div>
-                    </div>
-                    <div class="tech-category">
-                        <h4>数据库</h4>
-                        <div class="tech-items">
-                            <span>MySQL</span>
-                            <span>PostgreSQL</span>
-                            <span>MongoDB</span>
-                            <span>Redis</span>
-                        </div>
-                    </div>
-                    <div class="tech-category">
-                        <h4>其他</h4>
-                        <div class="tech-items">
-                            <span>Docker</span>
-                            <span>Git</span>
-                            <span>Linux</span>
-                            <span>Nginx</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="about" id="about">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-content">
-                        <span class="section-tag">About</span>
-                        <h2 class="section-title">关于冬浩</h2>
-                        <p>
-                            冬浩工作室成立于2019年，是一支由资深开发者组成的技术团队。我们专注于为企业提供高质量的软件定制开发服务。
-                        </p>
-                        <p>
-                            我们相信，好的软件不仅仅是功能的堆砌，更是对业务流程的深刻理解和对用户体验的极致追求。每一个项目，我们都全力以赴，力求交付超出预期的产品。
-                        </p>
-                        <div class="about-features">
-                            <div class="feature">
-                                <strong>专注品质</strong>
-                                <span>每个项目都经过严格测试</span>
-                            </div>
-                            <div class="feature">
-                                <strong>持续沟通</strong>
-                                <span>开发过程透明，随时反馈进度</span>
-                            </div>
-                            <div class="feature">
-                                <strong>售后保障</strong>
-                                <span>项目交付后提供长期维护支持</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-visual">
-                        <div class="visual-card">
-                            <div class="visual-inner">
-                                <div class="visual-text">
-                                    <span class="quote">"</span>
-                                    <p>代码是写给人看的，顺便给机器执行。</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="process">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Process</span>
-                    <h2 class="section-title">合作流程</h2>
-                </div>
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-num">1</div>
-                        <h4>需求沟通</h4>
-                        <p>深入了解您的业务需求和痛点</p>
-                    </div>
-                    <div class="step-line"></div>
-                    <div class="step">
-                        <div class="step-num">2</div>
-                        <h4>方案设计</h4>
-                        <p>制定技术方案和开发计划</p>
-                    </div>
-                    <div class="step-line"></div>
-                    <div class="step">
-                        <div class="step-num">3</div>
-                        <h4>开发测试</h4>
-                        <p>敏捷开发，持续交付可用版本</p>
-                    </div>
-                    <div class="step-line"></div>
-                    <div class="step">
-                        <div class="step-num">4</div>
-                        <h4>上线维护</h4>
-                        <p>部署上线，提供长期技术支持</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact" id="contact">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <span class="section-tag">Contact</span>
-                        <h2 class="section-title">联系我们</h2>
-                        <p class="contact-desc">
-                            有项目想法？欢迎联系我们，让我们一起把它变成现实。
-                        </p>
-                        <div class="contact-list">
-                            <div class="contact-item">
-                                <span class="contact-label">邮箱</span>
-                                <a href="mailto:contact@donghao.com">contact@donghao.com</a>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-label">微信</span>
-                                <span>DongHao_Studio</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-label">GitHub</span>
-                                <a href="https://github.com/yuan71058" target="_blank">github.com/yuan71058</a>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-label">Gitee</span>
-                                <a href="https://gitee.com/yuan71058" target="_blank">gitee.com/yuan71058</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-form-wrap">
-                        <form class="contact-form" id="contact-form">
-                            <div class="form-group">
-                                <label>您的称呼</label>
-                                <input type="text" name="name" placeholder="请输入您的姓名" required>
-                            </div>
-                            <div class="form-group">
-                                <label>联系方式</label>
-                                <input type="text" name="contact" placeholder="手机号或邮箱">
-                            </div>
-                            <div class="form-group">
-                                <label>项目描述</label>
-                                <textarea name="message" placeholder="简单描述您的需求..." rows="4" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-dark btn-full">发送消息</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <span class="logo-mark">DH</span>
-                        <span class="logo-name">冬浩工作室</span>
-                    </a>
-                    <p>用代码构建数字未来</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#services">服务</a>
-                    <a href="#works">案例</a>
-                    <a href="#about">关于</a>
-                    <a href="#contact">联系</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 冬浩工作室. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <a href="#home" class="back-top" id="back-top">
-        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
-            <path d="M18 15l-6-6-6 6" />
-        </svg>
-    </a>
-
-    <script src="js/main.js"></script>
+        <footer>
+            &copy; 2024 冬浩工作室
+        </footer>
+    </div>
 </body>
-
 </html>
