@@ -314,6 +314,45 @@
             opacity: 1;
         }
 
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-info {
+            margin-top: 20px;
+            padding: 20px 30px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            max-width: 800px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .modal-info h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .modal-info p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
         .work-content {
             padding: 24px;
         }
@@ -741,10 +780,14 @@
         initTheme();
 
         // 图片弹窗功能
-        function openImageModal(src) {
+        function openImageModal(src, title, desc) {
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
             modalImg.src = src;
+            modalTitle.textContent = title || '';
+            modalDesc.textContent = desc || '';
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
@@ -756,9 +799,12 @@
         }
 
         // 为所有案例图片添加点击事件
-        document.querySelectorAll('.work-image img').forEach(img => {
+        document.querySelectorAll('.work-card').forEach(card => {
+            const img = card.querySelector('.work-image img');
+            const title = card.querySelector('.work-content h3').textContent;
+            const desc = card.querySelector('.work-desc').textContent;
             img.addEventListener('click', function () {
-                openImageModal(this.src);
+                openImageModal(this.src, title, desc);
             });
         });
 
@@ -773,7 +819,13 @@
     <!-- 图片弹窗 -->
     <div class="image-modal" id="imageModal" onclick="if(event.target === this) closeImageModal()">
         <span class="close-btn" onclick="closeImageModal(); event.stopPropagation();">&times;</span>
-        <img id="modalImage" src="" alt="原图" onclick="event.stopPropagation();">
+        <div class="modal-content" onclick="event.stopPropagation();">
+            <img id="modalImage" src="" alt="原图">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
     </div>
 </body>
 
