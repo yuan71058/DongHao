@@ -762,13 +762,6 @@
             });
         });
 
-        // 点击弹窗背景关闭
-        document.getElementById('imageModal').addEventListener('click', function (e) {
-            if (e.target === this || e.target.classList.contains('close-btn')) {
-                closeImageModal();
-            }
-        });
-
         // ESC键关闭弹窗
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
