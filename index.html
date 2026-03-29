@@ -1,309 +1,438 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="冬浩工作室 - 专业的软件开发与技术服务团队">
-    <meta name="keywords" content="冬浩工作室,软件开发,编程,技术服务">
-    <title>冬浩工作室 - 专业软件开发团队</title>
+    <meta name="description" content="冬浩工作室 - 用代码构建数字未来">
+    <meta name="keywords" content="冬浩工作室,软件开发,网站开发,小程序开发,技术外包">
+    <title>冬浩工作室 - 用代码构建数字未来</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">
-                <span class="logo-icon">冬</span>
-                <span class="logo-text">冬浩工作室</span>
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="logo-mark">DH</span>
+                <span class="logo-name">冬浩工作室</span>
             </a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active">首页</a></li>
-                <li><a href="#about" class="nav-link">关于我们</a></li>
-                <li><a href="#services" class="nav-link">核心服务</a></li>
-                <li><a href="#portfolio" class="nav-link">作品展示</a></li>
-                <li><a href="#contact" class="nav-link">联系我们</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-item active">首页</a>
+                <a href="#services" class="nav-item">服务</a>
+                <a href="#works" class="nav-item">案例</a>
+                <a href="#about" class="nav-item">关于</a>
+                <a href="#contact" class="nav-item">联系</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="title-line">专注技术</span>
-                <span class="title-line">创造价值</span>
-            </h1>
-            <p class="hero-subtitle">冬浩工作室致力于为客户提供专业的软件开发与技术服务解决方案</p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn btn-primary">查看作品</a>
-                <a href="#contact" class="btn btn-secondary">联系我们</a>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-bg">
+                <div class="hero-grid"></div>
             </div>
-        </div>
-        <div class="hero-bg"></div>
-    </section>
+            <div class="hero-content">
+                <div class="hero-badge">软件开发工作室</div>
+                <h1 class="hero-title">
+                    用代码<br>
+                    <em>构建数字未来</em>
+                </h1>
+                <p class="hero-desc">
+                    我们是一支热爱技术的开发团队，专注于为企业提供定制化的软件解决方案。<br>
+                    从创意到落地，我们用专业和热情打造每一个项目。
+                </p>
+                <div class="hero-actions">
+                    <a href="#works" class="btn btn-dark">查看案例</a>
+                    <a href="#contact" class="btn btn-outline">开始合作</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>50+</strong>
+                        <span>项目交付</span>
+                    </div>
+                    <div class="stat">
+                        <strong>30+</strong>
+                        <span>合作客户</span>
+                    </div>
+                    <div class="stat">
+                        <strong>5年</strong>
+                        <span>行业经验</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-hint">
+                <span>向下滚动</span>
+                <i></i>
+            </div>
+        </section>
 
-    <section id="about" class="about section">
-        <div class="container">
-            <h2 class="section-title">关于我们</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>冬浩工作室</h3>
-                    <p>冬浩工作室是一家专注于软件开发与技术服务的工作室。我们拥有丰富的项目经验和专业的技术团队，致力于为客户提供高质量的技术解决方案。</p>
-                    <p>我们秉承"技术为本、服务至上"的理念，以客户需求为导向，不断追求技术创新和服务优化。</p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="50">0</span>+
-                            <span class="stat-label">完成项目</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="30">0</span>+
-                            <span class="stat-label">满意客户</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="5">0</span>+
-                            <span class="stat-label">年经验</span>
-                        </div>
-                    </div>
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Services</span>
+                    <h2 class="section-title">我们能做什么</h2>
+                    <p class="section-desc">根据您的业务需求，提供全方位的技术解决方案</p>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <span>工作室形象</span>
-                    </div>
+                <div class="service-list">
+                    <article class="service-card">
+                        <div class="service-num">01</div>
+                        <div class="service-content">
+                            <h3>定制软件开发</h3>
+                            <p>根据企业实际业务流程，量身定制管理系统、业务平台等各类软件产品，提升工作效率。</p>
+                            <ul class="service-tags">
+                                <li>企业管理系统</li>
+                                <li>ERP/CRM系统</li>
+                                <li>数据管理平台</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-num">02</div>
+                        <div class="service-content">
+                            <h3>网站与小程序</h3>
+                            <p>从企业官网到电商平台，从展示型网站到功能型应用，打造专业的线上品牌形象。</p>
+                            <ul class="service-tags">
+                                <li>企业官网</li>
+                                <li>电商平台</li>
+                                <li>微信小程序</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-num">03</div>
+                        <div class="service-content">
+                            <h3>自动化工具开发</h3>
+                            <p>开发各类自动化脚本和工具，帮助企业减少重复劳动，降低人力成本。</p>
+                            <ul class="service-tags">
+                                <li>数据处理工具</li>
+                                <li>自动化脚本</li>
+                                <li>爬虫采集</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-num">04</div>
+                        <div class="service-content">
+                            <h3>技术咨询与支持</h3>
+                            <p>提供技术选型建议、架构设计咨询，以及长期的技术维护和支持服务。</p>
+                            <ul class="service-tags">
+                                <li>技术选型</li>
+                                <li>架构设计</li>
+                                <li>运维支持</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="services" class="services section">
-        <div class="container">
-            <h2 class="section-title">核心服务</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">软件开发</h3>
-                    <p class="service-desc">提供定制化软件开发服务，包括Web应用、桌面应用、移动应用等多种类型的软件开发。</p>
+        <section class="works" id="works">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">精选案例</h2>
+                    <p class="section-desc">每一个项目都倾注了我们的心血与热情</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">网站建设</h3>
-                    <p class="service-desc">专业的前端开发与网站建设服务，打造响应式、高性能的现代化网站。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                            <path d="M2 17l10 5 10-5"></path>
-                            <path d="M2 12l10 5 10-5"></path>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">系统集成</h3>
-                    <p class="service-desc">提供企业级系统集成解决方案，实现各业务系统间的无缝对接与数据互通。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="3"></circle>
-                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">技术支持</h3>
-                    <p class="service-desc">提供全方位的技术支持与维护服务，确保系统稳定运行，及时响应客户需求。</p>
+                <div class="works-grid">
+                    <article class="work-card work-large">
+                        <div class="work-image">
+                            <div class="work-placeholder">
+                                <span>企业管理系统</span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-meta">
+                                <span class="work-category">Web应用</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <h3 class="work-title">企业综合管理平台</h3>
+                            <p class="work-desc">为某制造企业定制的综合管理系统，涵盖生产、库存、销售、财务等模块，实现业务流程数字化。</p>
+                            <div class="work-tech">
+                                <span>Vue.js</span>
+                                <span>Python</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <div class="work-image">
+                            <div class="work-placeholder">
+                                <span>小程序</span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-meta">
+                                <span class="work-category">小程序</span>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <h3 class="work-title">社区服务小程序</h3>
+                            <p class="work-desc">社区物业服务平台，支持报修、缴费、公告等功能。</p>
+                            <div class="work-tech">
+                                <span>微信小程序</span>
+                                <span>云开发</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <div class="work-image">
+                            <div class="work-placeholder">
+                                <span>数据平台</span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-meta">
+                                <span class="work-category">数据分析</span>
+                                <span class="work-year">2023</span>
+                            </div>
+                            <h3 class="work-title">数据可视化大屏</h3>
+                            <p class="work-desc">实时数据展示大屏，支持多数据源接入。</p>
+                            <div class="work-tech">
+                                <span>ECharts</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <div class="work-image">
+                            <div class="work-placeholder">
+                                <span>电商</span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-meta">
+                                <span class="work-category">电商</span>
+                                <span class="work-year">2023</span>
+                            </div>
+                            <h3 class="work-title">在线商城系统</h3>
+                            <p class="work-desc">B2C电商平台，支持多商户入驻。</p>
+                            <div class="work-tech">
+                                <span>React</span>
+                                <span>Java</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <div class="work-image">
+                            <div class="work-placeholder">
+                                <span>工具</span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="work-meta">
+                                <span class="work-category">自动化</span>
+                                <span class="work-year">2023</span>
+                            </div>
+                            <h3 class="work-title">数据采集工具</h3>
+                            <p class="work-desc">多平台数据自动采集与整理工具。</p>
+                            <div class="work-tech">
+                                <span>Python</span>
+                                <span>Selenium</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="portfolio" class="portfolio section">
-        <div class="container">
-            <h2 class="section-title">作品展示</h2>
-            <div class="portfolio-filter">
-                <button class="filter-btn active" data-filter="all">全部</button>
-                <button class="filter-btn" data-filter="web">Web应用</button>
-                <button class="filter-btn" data-filter="desktop">桌面应用</button>
-                <button class="filter-btn" data-filter="mobile">移动应用</button>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">项目截图</div>
-                        <div class="portfolio-overlay">
-                            <h4>企业管理系统</h4>
-                            <p>Web应用</p>
-                            <a href="#" class="portfolio-link">查看详情</a>
+        <section class="tech">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Technology</span>
+                    <h2 class="section-title">技术栈</h2>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h4>前端开发</h4>
+                        <div class="tech-items">
+                            <span>Vue.js</span>
+                            <span>React</span>
+                            <span>微信小程序</span>
+                            <span>HTML5/CSS3</span>
+                            <span>TypeScript</span>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item" data-category="desktop">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">项目截图</div>
-                        <div class="portfolio-overlay">
-                            <h4>数据分析工具</h4>
-                            <p>桌面应用</p>
-                            <a href="#" class="portfolio-link">查看详情</a>
+                    <div class="tech-category">
+                        <h4>后端开发</h4>
+                        <div class="tech-items">
+                            <span>Python</span>
+                            <span>Java</span>
+                            <span>Node.js</span>
+                            <span>PHP</span>
+                            <span>Go</span>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item" data-category="mobile">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">项目截图</div>
-                        <div class="portfolio-overlay">
-                            <h4>移动端应用</h4>
-                            <p>移动应用</p>
-                            <a href="#" class="portfolio-link">查看详情</a>
+                    <div class="tech-category">
+                        <h4>数据库</h4>
+                        <div class="tech-items">
+                            <span>MySQL</span>
+                            <span>PostgreSQL</span>
+                            <span>MongoDB</span>
+                            <span>Redis</span>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">项目截图</div>
-                        <div class="portfolio-overlay">
-                            <h4>电商平台</h4>
-                            <p>Web应用</p>
-                            <a href="#" class="portfolio-link">查看详情</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="desktop">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">项目截图</div>
-                        <div class="portfolio-overlay">
-                            <h4>自动化工具</h4>
-                            <p>桌面应用</p>
-                            <a href="#" class="portfolio-link">查看详情</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">项目截图</div>
-                        <div class="portfolio-overlay">
-                            <h4>在线教育平台</h4>
-                            <p>Web应用</p>
-                            <a href="#" class="portfolio-link">查看详情</a>
+                    <div class="tech-category">
+                        <h4>其他</h4>
+                        <div class="tech-items">
+                            <span>Docker</span>
+                            <span>Git</span>
+                            <span>Linux</span>
+                            <span>Nginx</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact section">
-        <div class="container">
-            <h2 class="section-title">联系我们</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>联系方式</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                        </div>
-                        <div class="contact-text">
-                            <h4>地址</h4>
-                            <p>中国</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                        </div>
-                        <div class="contact-text">
-                            <h4>邮箱</h4>
-                            <p>contact@donghao.com</p>
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <span class="section-tag">About</span>
+                        <h2 class="section-title">关于冬浩</h2>
+                        <p>
+                            冬浩工作室成立于2019年，是一支由资深开发者组成的技术团队。我们专注于为企业提供高质量的软件定制开发服务。
+                        </p>
+                        <p>
+                            我们相信，好的软件不仅仅是功能的堆砌，更是对业务流程的深刻理解和对用户体验的极致追求。每一个项目，我们都全力以赴，力求交付超出预期的产品。
+                        </p>
+                        <div class="about-features">
+                            <div class="feature">
+                                <strong>专注品质</strong>
+                                <span>每个项目都经过严格测试</span>
+                            </div>
+                            <div class="feature">
+                                <strong>持续沟通</strong>
+                                <span>开发过程透明，随时反馈进度</span>
+                            </div>
+                            <div class="feature">
+                                <strong>售后保障</strong>
+                                <span>项目交付后提供长期维护支持</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                        </div>
-                        <div class="contact-text">
-                            <h4>电话</h4>
-                            <p>+86 xxx xxxx xxxx</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Gitee</h4>
-                            <p><a href="https://gitee.com/yuan71058" target="_blank">gitee.com/yuan71058</a></p>
+                    <div class="about-visual">
+                        <div class="visual-card">
+                            <div class="visual-inner">
+                                <div class="visual-text">
+                                    <span class="quote">"</span>
+                                    <p>代码是写给人看的，顺便给机器执行。</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="contact-form">
-                    <h3>发送消息</h3>
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="您的姓名" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="您的邮箱" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="主题">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="您的消息" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">发送消息</button>
-                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="process">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Process</span>
+                    <h2 class="section-title">合作流程</h2>
+                </div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <h4>需求沟通</h4>
+                        <p>深入了解您的业务需求和痛点</p>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <h4>方案设计</h4>
+                        <p>制定技术方案和开发计划</p>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <h4>开发测试</h4>
+                        <p>敏捷开发，持续交付可用版本</p>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-num">4</div>
+                        <h4>上线维护</h4>
+                        <p>部署上线，提供长期技术支持</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <span class="section-tag">Contact</span>
+                        <h2 class="section-title">联系我们</h2>
+                        <p class="contact-desc">
+                            有项目想法？欢迎联系我们，让我们一起把它变成现实。
+                        </p>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <span class="contact-label">邮箱</span>
+                                <a href="mailto:contact@donghao.com">contact@donghao.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">微信</span>
+                                <span>DongHao_Studio</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">GitHub</span>
+                                <a href="https://github.com/yuan71058" target="_blank">github.com/yuan71058</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Gitee</span>
+                                <a href="https://gitee.com/yuan71058" target="_blank">gitee.com/yuan71058</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrap">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label>您的称呼</label>
+                                <input type="text" name="name" placeholder="请输入您的姓名" required>
+                            </div>
+                            <div class="form-group">
+                                <label>联系方式</label>
+                                <input type="text" name="contact" placeholder="手机号或邮箱">
+                            </div>
+                            <div class="form-group">
+                                <label>项目描述</label>
+                                <textarea name="message" placeholder="简单描述您的需求..." rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark btn-full">发送消息</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-inner">
                 <div class="footer-brand">
-                    <a href="#home" class="logo">
-                        <span class="logo-icon">冬</span>
-                        <span class="logo-text">冬浩工作室</span>
+                    <a href="#" class="logo">
+                        <span class="logo-mark">DH</span>
+                        <span class="logo-name">冬浩工作室</span>
                     </a>
-                    <p>专注技术，创造价值</p>
+                    <p>用代码构建数字未来</p>
                 </div>
                 <div class="footer-links">
-                    <h4>快速链接</h4>
-                    <ul>
-                        <li><a href="#home">首页</a></li>
-                        <li><a href="#about">关于我们</a></li>
-                        <li><a href="#services">核心服务</a></li>
-                        <li><a href="#portfolio">作品展示</a></li>
-                        <li><a href="#contact">联系我们</a></li>
-                    </ul>
-                </div>
-                <div class="footer-services">
-                    <h4>服务范围</h4>
-                    <ul>
-                        <li>软件开发</li>
-                        <li>网站建设</li>
-                        <li>系统集成</li>
-                        <li>技术支持</li>
-                    </ul>
+                    <a href="#services">服务</a>
+                    <a href="#works">案例</a>
+                    <a href="#about">关于</a>
+                    <a href="#contact">联系</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -312,12 +441,13 @@
         </div>
     </footer>
 
-    <a href="#home" class="back-to-top" id="back-to-top">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="18 15 12 9 6 15"></polyline>
+    <a href="#home" class="back-top" id="back-top">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M18 15l-6-6-6 6" />
         </svg>
     </a>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
